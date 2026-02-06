@@ -75,7 +75,7 @@ const About = () => {
               </h2>
               
               <p className="text-base sm:text-lg text-gray-700 font-body leading-relaxed">
-                <strong className="text-navy-900">Anabolic DNA Formulations LLC</strong> is a premier pharmaceutical company dedicated to producing high-purity, pharmaceutical-grade formulations that meet and exceed industry standards. Since our inception, we have been at the forefront of pharmaceutical innovation, combining cutting-edge technology with traditional quality assurance practices.
+                <strong className="text-navy-900">BULLPHARMA Formulations LLC</strong> is a premier pharmaceutical company dedicated to producing high-purity, pharmaceutical-grade formulations that meet and exceed industry standards. Since our inception, we have been at the forefront of pharmaceutical innovation, combining cutting-edge technology with traditional quality assurance practices.
               </p>
               
               <p className="text-base sm:text-lg text-gray-700 font-body leading-relaxed">
@@ -88,39 +88,43 @@ const About = () => {
             </div>
           </div>
 
-          {/* Mission & Vision */}
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
-            {/* Mission */}
-            <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 text-white">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase">Our Mission</h2>
-              </div>
-              <p className="text-sm sm:text-base lg:text-lg font-body leading-relaxed">
-                To deliver the highest quality pharmaceutical formulations through innovative manufacturing processes, rigorous quality control, and unwavering commitment to safety and efficacy. We strive to improve global health outcomes by providing reliable, pure, and effective pharmaceutical products.
-              </p>
-            </div>
+        {/* Mission & Vision */}
+<div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
+  {/* Mission – Light version (recommended) */}
+  <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 border border-teal-200">
+    <div className="flex items-center space-x-3 mb-4">
+      <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+        <svg className="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      </div>
+      <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase text-navy-900">
+        Our Mission
+      </h2>
+    </div>
+    <p className="text-sm sm:text-base lg:text-lg font-body leading-relaxed text-gray-800">
+      To deliver the highest quality pharmaceutical formulations through innovative manufacturing processes, rigorous quality control, and unwavering commitment to safety and efficacy. We strive to improve global health outcomes by providing reliable, pure, and effective pharmaceutical products.
+    </p>
+  </div>
 
-            {/* Vision */}
-            <div className="bg-gradient-to-br from-navy-700 to-navy-900 rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 text-white">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase">Our Vision</h2>
-              </div>
-              <p className="text-sm sm:text-base lg:text-lg font-body leading-relaxed">
-                To be the global leader in pharmaceutical formulations, recognized for our exceptional quality, innovative solutions, and positive impact on healthcare worldwide. We envision a future where our products are trusted by healthcare professionals and valued by users across the globe.
-              </p>
-            </div>
-          </div>
+  {/* Vision – keep dark but with enhanced visibility */}
+  <div className="bg-gradient-to-br from-navy-700 to-navy-900 rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 text-white">
+    <div className="flex items-center space-x-3 mb-4">
+      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+        <svg className="w-7 h-7 text-white drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </div>
+      <h2 className="text-2xl sm:text-3xl font-display font-bold uppercase drop-shadow-lg text-black">
+        Our Vision
+      </h2>
+    </div>
+    <p className="text-sm sm:text-base lg:text-lg font-body leading-relaxed drop-shadow-md text-black">
+      To be the global leader in pharmaceutical formulations, recognized for our exceptional quality, innovative solutions, and positive impact on healthcare worldwide. We envision a future where our products are trusted by healthcare professionals and valued by users across the globe.
+    </p>
+  </div>
+</div>
 
           {/* Stats Section */}
           <div className="bg-white rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 mb-8 lg:mb-12">
@@ -168,7 +172,7 @@ const About = () => {
           {/* Why Choose Us */}
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl lg:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 border-2 border-gray-100">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-6 lg:mb-8 uppercase tracking-tight">
-              Why Choose Anabolic DNA?
+              Why Choose BULLPHARMA?
             </h2>
             
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
@@ -225,7 +229,7 @@ const About = () => {
               Our Commitment
             </h2>
             <p className="text-sm sm:text-base lg:text-lg font-body leading-relaxed max-w-4xl mx-auto">
-              At Anabolic DNA Formulations LLC, we are committed to excellence in every aspect of our operations. From research and development to manufacturing and distribution, quality is our top priority. We continue to invest in advanced technologies, skilled personnel, and robust quality systems to ensure that every product meets the highest standards of purity, safety, and efficacy.
+              At BULLPHARMA Formulations LLC, we are committed to excellence in every aspect of our operations. From research and development to manufacturing and distribution, quality is our top priority. We continue to invest in advanced technologies, skilled personnel, and robust quality systems to ensure that every product meets the highest standards of purity, safety, and efficacy.
             </p>
           </div>
 

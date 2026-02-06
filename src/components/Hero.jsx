@@ -51,7 +51,7 @@ const Hero = () => {
           <div className="space-y-5 lg:space-y-8 opacity-0 animate-fadeInUp">
             <div className="space-y-3 lg:space-y-4">
               <p className="text-teal-400 text-sm sm:text-base lg:text-lg font-body font-medium tracking-[0.25em] uppercase">
-                Welcome to Anabolic DNA
+                Welcome to BULLPHARMA
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-white leading-tight tracking-tight">
                 LEADING<br />

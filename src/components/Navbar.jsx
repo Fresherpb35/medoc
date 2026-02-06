@@ -25,14 +25,19 @@ return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16 lg:h-20">
         {/* Logo - unchanged */}
-        <Link to="/" className="flex items-center space-x-2 group">
-          <div className="w-8 h-8 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-            <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-          </div>
-          <span className="text-white font-display text-lg sm:text-xl font-bold tracking-wider">
-            ANABOLIC <span className="text-teal-400">DNA</span>
-          </span>
-        </Link>
+        <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
+  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden shadow-lg transform group-hover:scale-110 transition-all duration-300">
+    <img 
+      src="/logo.png"           // ← put your logo in public/ folder
+      alt="Bull Pharma Logo"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  <span className="text-white font-display text-lg sm:text-xl font-bold tracking-wider">
+    BULL PHARMA
+  </span>
+</Link>
 
         {/* Desktop Navigation - slight contrast bump on inactive */}
         <div className="hidden lg:flex items-center space-x-1">

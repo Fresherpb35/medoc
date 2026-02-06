@@ -33,7 +33,7 @@ const Authenticity = () => {
             {/* Optional overlay for emphasis */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent flex items-end p-6">
               <p className="text-white text-lg lg:text-xl font-semibold drop-shadow-lg">
-                Verify Genuine Anabolic DNA Products
+                Verify Genuine BULLPHARMA Products
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Authenticity = () => {
           {/* Right Side - Form & Info */}
           <div className="bg-white rounded-xl shadow-lg p-8 lg:p-12 order-2 lg:order-none">
             <p className="text-lg text-gray-700 font-body leading-relaxed mb-6">
-              Ensure your Anabolic DNA product is 100% authentic. Our advanced verification system checks security features like holograms, batch codes, and tamper-evident seals.
+              Ensure your BULLPHARMA product is 100% authentic. Our advanced verification system checks security features like holograms, batch codes, and tamper-evident seals.
             </p>
 
             <p className="text-lg text-gray-700 font-body leading-relaxed mb-8">

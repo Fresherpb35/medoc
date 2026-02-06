@@ -4,7 +4,7 @@ const ThermoTech = () => {
     { label: 'Product Name', value: 'STANA (Stanozolol)' },
     { label: 'Strength', value: '10 mg' },
     { label: 'Form', value: '100 Tablets' },
-    { label: 'Manufacturer', value: 'Bull Pharma' },
+    { label: 'Manufacturer', value: 'BULLPHARMA' },
   ];
 
   const precautions = [
@@ -51,7 +51,7 @@ const ThermoTech = () => {
               <div className="aspect-square bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg lg:rounded-xl overflow-hidden relative">
                 <img 
                   src="/stana-product.jpeg" 
-                  alt="STANA Stanozolol 10mg - Bull Pharma" 
+                  alt="STANA Stanozolol 10mg - BULLPHARMA" 
                   className="w-full h-full object-contain p-4 sm:p-6 lg:p-8 hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -106,7 +106,7 @@ const ThermoTech = () => {
             </h2>
             <div className="prose max-w-none">
               <p className="text-sm sm:text-base lg:text-lg text-gray-700 font-body leading-relaxed mb-4">
-                STANA (Stanozolol) is a pharmaceutical-grade formulation manufactured by Bull Pharma. Each tablet contains 10mg of active ingredient, carefully formulated to meet the highest quality standards.
+                STANA (Stanozolol) is a pharmaceutical-grade formulation manufactured by BULLPHARMA. Each tablet contains 10mg of active ingredient, carefully formulated to meet the highest quality standards.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-gray-700 font-body leading-relaxed mb-4">
                 Our manufacturing process employs advanced ThermoTech technology to ensure optimal temperature control throughout production, maintaining product integrity and efficacy. Every batch undergoes rigorous quality assurance testing to guarantee purity and potency.
