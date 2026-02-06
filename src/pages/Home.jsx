@@ -10,6 +10,6 @@ const Home = () => {
       <WhatWeDo />
     </div>
   );
-};
+}
 
 export default Home;
