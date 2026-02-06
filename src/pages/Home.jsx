@@ -1,4 +1,4 @@
-import AboutSection from '../components/Aboutsection';
+import AboutSection from '../components/AboutSection';
 import Hero from '../components/Hero';
 import WhatWeDo from '../components/WhatWeDo';
 
