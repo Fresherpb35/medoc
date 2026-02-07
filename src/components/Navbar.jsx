@@ -16,7 +16,6 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
-// ... rest of your imports and code unchanged ...
 
 return (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-navy-900 border-b border-white/10 shadow-md">
