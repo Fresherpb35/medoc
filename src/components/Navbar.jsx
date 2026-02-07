@@ -8,7 +8,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'HOME', path: '/' },
     { name: 'ABOUT', path: '/about' },
-    { name: 'PRODUCTS', path: '/products' },
+    // { name: 'PRODUCTS', path: '/products' },
     { name: 'THERMOTECH', path: '/thermotech' },
     { name: 'AUTHENTICITY', path: '/authenticity' },
     { name: 'CONTACT', path: '/contact' },
