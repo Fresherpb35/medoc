@@ -10,7 +10,7 @@ const Navbar = () => {
     { name: 'ABOUT', path: '/about' },
     // { name: 'PRODUCTS', path: '/products' },
     { name: 'THERMOTECH', path: '/thermotech' },
-    { name: 'AUTHENTICITY', path: '/authenticity' },
+    { name: 'AUTHENTICITY', path: '/check-code' },
     { name: 'CONTACT', path: '/contact' },
   ];
 
