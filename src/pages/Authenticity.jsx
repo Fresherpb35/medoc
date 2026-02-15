@@ -30,43 +30,41 @@ const Authenticity = () => {
     }));
   };
 
-  const handleVerify = (e) => {
+  const handleVerify = async (e) => {
     e.preventDefault();
     setMessage('');
     setIsSubmitting(true);
 
-    // Basic frontend validation
-    if (!formData.name.trim()) {
-      setMessage('Please enter your name');
-      setIsSubmitting(false);
-      return;
-    }
-    if (!formData.mobile || formData.mobile.length !== 10) {
-      setMessage('Please enter a valid 10-digit mobile number');
-      setIsSubmitting(false);
-      return;
-    }
-    if (!formData.serialNumber.trim()) {
-      setMessage('Please enter the serial number');
-      setIsSubmitting(false);
-      return;
-    }
-    if (!formData.code.trim()) {
-      setMessage('Please enter the verification code');
-      setIsSubmitting(false);
-      return;
-    }
+    // Removed required check for serial + code → now fully optional
 
-    // Demo / placeholder result — replace with real API call
-    setTimeout(() => {
-      setMessage('Verification in progress... (Demo mode)');
-      setIsSubmitting(false);
+    try {
+      const res = await fetch("https://bullpharma-bac.onrender.com/api/verify", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name.trim() || undefined,
+          mobile: formData.mobile || undefined,
+          serial_no: formData.serialNumber.trim()
+            ? Number(formData.serialNumber.trim())
+            : undefined,
+          uic_code: formData.code.trim() || undefined
+        })
+      });
 
-      // Example of how real response might look:
-      // setMessage('✅ Product verified successfully!');
-      // or
-      // setMessage('❌ Invalid code. Please check and try again.');
-    }, 1200);
+      const data = await res.json();
+
+      if (data.success) {
+        setMessage("✅ Product verified successfully");
+      } else {
+        setMessage("❌ " + (data.message || "Verification failed"));
+      }
+    } catch (error) {
+      setMessage("❌ Server not reachable. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -86,7 +84,7 @@ const Authenticity = () => {
             <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  Full Name *
+                  Full Name
                 </label>
                 <input
                   type="text"
@@ -96,13 +94,12 @@ const Authenticity = () => {
                   onChange={handleChange}
                   placeholder="Enter your full name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition"
-                  required
                 />
               </div>
 
               <div>
                 <label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  Mobile Number *
+                  Mobile Number
                 </label>
                 <input
                   type="tel"
@@ -113,7 +110,6 @@ const Authenticity = () => {
                   placeholder="10-digit number (e.g. 9876543210)"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition"
                   maxLength={10}
-                  required
                 />
               </div>
             </div>
@@ -122,7 +118,7 @@ const Authenticity = () => {
             <div className="space-y-5 sm:space-y-6">
               <div>
                 <label htmlFor="serialNumber" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  Serial Number / Batch Number *
+                  Serial Number / Batch Number (optional)
                 </label>
                 <input
                   type="text"
@@ -132,13 +128,12 @@ const Authenticity = () => {
                   onChange={handleChange}
                   placeholder="Enter serial / batch number (e.g. BP2025-XXXX)"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition uppercase tracking-wide"
-                  required
                 />
               </div>
 
               <div>
                 <label htmlFor="code" className="block text-sm font-medium text-gray-700 mb-1.5">
-                  Verification Code / Scratch Code *
+                  Verification Code / Scratch Code /UIC code*
                 </label>
                 <input
                   type="text"
@@ -149,7 +144,6 @@ const Authenticity = () => {
                   placeholder="Enter verification code (e.g. ADN-XXXX-XXXX)"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-teal-500 focus:ring-2 focus:ring-teal-100 outline-none transition uppercase tracking-wide"
                   maxLength={20}
-                  required
                 />
               </div>
             </div>
@@ -158,8 +152,8 @@ const Authenticity = () => {
               type="submit"
               disabled={isSubmitting}
               className={`w-full mt-4 sm:mt-6 py-3.5 px-8 text-lg font-semibold rounded-lg shadow-md transition-all
-                ${isSubmitting 
-                  ? 'bg-teal-400 cursor-not-allowed' 
+                ${isSubmitting
+                  ? 'bg-teal-400 cursor-not-allowed'
                   : 'bg-teal-600 hover:bg-teal-700 text-white hover:shadow-lg'}`}
             >
               {isSubmitting ? 'Verifying...' : 'Verify Product'}
