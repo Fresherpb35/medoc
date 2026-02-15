@@ -19,7 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/thermotech" element={<Thermotech />} />
-            <Route path="/authenticity" element={<Authenticity />} />
+            <Route path="/check-code" element={<Authenticity />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
